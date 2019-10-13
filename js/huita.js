@@ -53,7 +53,7 @@ function render(){
 		let ang = (x % 2 == 0 ? Math.PI : 0)
 		let offsetX = (y % 2 == 0 ? radius * 0.88 : 0)
 		let offsetY = (x % 2 == 0 ? radius / 2 : 0)
-		let color = hsvToRgb((t + (x + y) * 2) % 360 / 360, 0.9, 0.1)
+		let color = hsvToRgb((t + (x + y) * 2) % 360 / 360, 0.9, 0.3)
 
 		ctx.strokeStyle = `rgb(${color.r}, ${color.g}, ${color.b})`
 
