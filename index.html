@@ -1,11 +1,69 @@
-<title>root: 乁( ⏒ ͜ʖ ⏒ )ㄏ</title>
+<!DOCTYPE html>
+<html>
 
-<script type="text/javascript" src="js/huita.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> 
+  <style>
+      body{
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+        background: rgb(10,10,25);
+      }
 
-<body onload="load()" style="margin: 0; height: 100%; width: 100%">
-	<canvas id="canvas" style="background-color: #000000; height: 100%; width: 100%; position: relative; top: 0%"></canvas>
-	<div style="height:150px; background-color: rgb(0,0,0); position: fixed; left: 0; top: 50px; width: 100%; align-self: center;"></div>
-	<h1 id="lenny" style="color: #ffffff; transform: rotate(10deg); position: fixed; left: 0; top: 50px; width: 100%; font-family: 'Oswald', sans-serif; text-align: center;">乁( ⏒ ͜ʖ ⏒ )ㄏ</h1>
-	<h1 style="color: #ffffff; transform: rotate(10deg); position: fixed; left: 0; top: 100px; width: 100%; font-family: 'Oswald', sans-serif; text-align: center;">Чото блять неизвестное</h1>
-</body>
+      #nick{
+        user-select: none;
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        top: 100px;
+        left: 50%;
+        font-size: 60px;
+        margin: 0 -130px;
+        background: linear-gradient(50deg, #652dff, #6dff6d); 
+        -webkit-text-fill-color: transparent; 
+        -webkit-background-clip: text; 
+      }
+
+      .label{
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        left: 50%;
+        text-decoration: none;
+      }
+
+      #tools{
+        top: 200px;
+        margin: 0 -202px;
+        color: #c155ff;
+        font-size: 50px;
+      }
+
+      #gluasyntaxtool{
+        top: 255px;
+        margin: 0 -155px;
+        color: #2238ff;
+        font-size: 40px;
+      }
+
+      #gluasyntaxtool:hover{
+        color: #4457ff;
+      }
+  </style>
+
+  <body id="body">
+    <div id="nick">>Deyvan</div>
+
+    <div class="label" id="tools">Tools:</div>
+    <a class="label" id="gluasyntaxtool" href="http://deyvan.github.io/glua_syntax_tool/">>GLua syntax tool</a>
+
+
+
+    <script>
+      var nick = document.getElementById("nick")
+      let cursor = false
+      nick.innerHTML = ">Deyvan"
+      setInterval(() => {
+        nick.innerHTML = cursor ? ">Deyvan|" : ">Deyvan"
+        cursor = !cursor;
+      }, 1000)
+    </script>
+  </body>
+</html>
